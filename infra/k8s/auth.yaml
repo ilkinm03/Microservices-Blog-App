@@ -15,6 +15,9 @@ spec:
       containers:
         - name: auth
           image: ilkiinm03/blog-auth
+          env:
+            - name: MONGO_URI
+              value: "mongodb://blog-auth-mongo-srv:27017/auth"
 ---
 apiVersion: v1
 kind: Service
